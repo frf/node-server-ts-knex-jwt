@@ -27,7 +27,7 @@ export default class SkillsController {
             avatar,
             whatsapp,
             bio,
-            langs,
+            lang,
             cost
         } = request.body;
     
@@ -44,7 +44,7 @@ export default class SkillsController {
             const user_id = insertedUsersIds[0];
         
             const insertedClassesIds = await trx('skills').insert({
-                langs,
+                lang,
                 cost,
                 user_id
             });
